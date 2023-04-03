@@ -1,0 +1,32 @@
+Scenario 1	Upon Account Creation or updation if Industry is not null and having value as 'Media' then populate Rating as Hot
+Scenario 2	If opportunity Stage is updated upon its creation or update then update description as either 'Opp is Closed Lost' or 'Opp is Closed Won' or 'Opp is Open'.
+Scenario 3	If the Account phone is updated then populate the phone number on all related Contacts (Home Phone field). [Using Map]
+Scenario 4	If the Account phone is updated then populate the phone number on all related Contacts (Home Phone field). [Using Parent-Child SOQL]
+Scenario 5	If the Account billing address is updated then update related contacts mailing address. [Using Map]
+Scenario 6	If the Account billing address is updated then update related contacts mailing address. [Using Parent-Child SOQL]
+Scenario 7	When a Opportunity Stage (field) is changed, create a Task record on Opportunity and assign it to Logged In User/Opportunity Owner / Any User.
+Scenario 8	Write a trigger on Account when Account Active field is updated from 'Yes' to 'No' then check all opportunities associated with the account. Update all Opportunities Stage to close lost if stage not equal to close won.
+Scenario 9	Account records cannot be deleted if active is Yes.
+Scenario 10	Prevent account record from being edited if the record is created 7 days back.
+Scenario 11	Prevent account record from being edited if the record is created 7 days back.
+Scenario 12	When an opportunity is updated to Closed Lost and Closed Lost Reason (field) is not populated then throw validation error that 'Please populate Closed Lost Reason' on opportunity. [before update]
+Scenario 13	Write a trigger on Account and check only System Administrator profile users should be able to delete an account.
+Scenario 14	If an opportunity is closed then, no one should be able to delete it except the user having a System Administrator profile.
+Scenario 15	Prevent deletion of an account if there is any opportunity related to that account.
+Scenario 16	Prevent deletion of an account if there is any case related to that account.
+Scenario 17	When the Employee record is deleted then update 'Left Employee Count' on Account.
+Scenario 18	Undelete Employee record and set Active as true.
+Scenario 19	When the Employee record is undeleted then update 'Left Employee Count' on Account.
+Scenario 20	When the Employee record is inserted, deleted and undeleted then update 'Present Employee Count' on related Account. [Parent-Child SOQL]
+Scenario 21	Upon contact creation an email should be sent to email populated on Contact with specified template.
+Scenario 22	Create two record types named as "Partner Case" and "Customer Case" on Case Object. On creation of Case, as per the record type populate the total number of Partner Case or Customer Case on Account object. Create Custom Fields on Account to have total numbers.
+Scenario 23	When any Opportunity is created with amount populated or Opportunity Amount is updated then populate total Amount on Account Level for all related opportunities in Annual Revenue Field. If opportunity is deleted or undeleted then update Amount on Account as well. (Hint: rollup summary)
+Scenario 24	Database class and addError( ) method in trigger.
+Scenario 25	Prevent Recursion in Apex Trigger.
+Scenario 26	When an opportunity is updated to closed won or closed lost then update description having value 'Opportunity is Closed Won' or 'Opportunity is Closed Lost' accordingly. (Hint: Recursion)
+Scenario 27	Write a trigger, if the owner of an account is changed then the owner for the related contacts should also be updated. [Without Map]
+Scenario 28	Write a trigger, if the owner of an account is changed then the owner for the related contacts should also be updated. [Without Map]
+Scenario 29	Whenever a new User having profile "System Administrator" is inserted and is Active, add the user to the public group "Admins". Create a public group named Admins.
+Scenario 30	Write a trigger on contact to prevent duplicate records based on Contact Email.
+Scenario 31	Set OWD as Private for Account. Once an Account record is created, it should be automatically shared with any one user who belongs to Standard User profile.
+Scenario 32	Demo Trigger.isExecuting Context Variable.
